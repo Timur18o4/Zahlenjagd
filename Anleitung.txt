@@ -1,0 +1,51 @@
+ZAHLENJAGD · Vom Niemand zum Retter
+
+1. Zahlenjagd-starten.cmd doppelklicken. Die Steuerung öffnet sich im Browser.
+   Voraussetzung ist Node.js 22 oder neuer. „Zahlenjagd beenden“ in der
+   Regie beendet das Programm samt Twitch-Verbindung. Alternativ kannst
+   du das Spielfenster mit der Serverausgabe schließen, wenn es offen ist.
+2. In OBS die Szene „Zahlenjagd“ auswählen. Bei manueller Einrichtung
+   eine Browserquelle mit http://127.0.0.1:8793/overlay anlegen.
+   Breite 1920, Höhe 1080. Aktiviere „Audio über OBS steuern“ in den
+   Eigenschaften der Quelle. Die Vorschau aus der Regie ist stumm.
+3. „Neue Route würfeln“ erzeugt vor der Runde eine andere Karte mit
+   neuen Verbindungen, Stärken und Waffen. Die Wege können auch nach
+   Norden oder Süden verlaufen. „Handtest starten“ nutzt die angezeigte
+   Karte. „Spiel zurücksetzen“ bringt euch auf derselben Karte zum Start.
+4. Unter „Twitch-Kanal“ den Namen oder den Twitch-Link eintragen und
+   „Kanal verbinden“ anklicken. Zahlenjagd speichert den Kanal im Unterordner
+   data. Auf „Verbunden“ warten und „Chat-Runde starten“ wählen. Zuschauer
+   wählen mit den eingeblendeten Befehlen von !a bis !e. Der erste gültige Befehl
+   am Wegpunkt wird sofort ausgeführt. Während einer Bewegung oder eines
+   Duells werden weitere Befehle übersprungen.
+   Ihr könnt das auch im Twitch-Chat testen, während OBS offline ist.
+
+Ihr startet mit Stärke 5. Jede niedrigere Zahl bringt euch bei einem Sieg
+ihren Wert dazu. Gleichstand oder eine höhere Zahl beendet den Lauf.
+Jeder der beiden Akte hat 20 Orte in fünf Gebieten. Jeder Gegner bringt nur einmal
+Stärke. Erkannte Wege könnt ihr ohne Kampf erneut nehmen. Sackgassen
+führen nach dem Kampf automatisch zurück, wenn es nur den Rückweg gibt.
+Manche Engpässe brauchen zusätzliche
+Stärke aus einem Umweg. Die nötige Stärke steht am jeweiligen Weg.
+Ritter, Monster und Fabelwesen bewachen verschiedene Abzweige.
+Entdeckte Abkürzungen können einen Abschnitt umgehen. Im ersten Akt
+zieht ein Rivale auf einer eigenen Strecke zur Zitadelle und gewinnt
+Stärke aus seinen Kämpfen. Die Rivalenanzeige zeigt seinen Fortschritt.
+Die Zahl der Entscheidungen und die Dauer hängen von eurer Route ab.
+An der Zitadelle entführt der Rivale die Prinzessin. Die Verfolgung
+beginnt automatisch auf einer neuen Karte. Eure Stärke bleibt erhalten.
+Werkstätten, Dampftrassen und Maschinenstadt führen zur Neonspitze.
+Dort kämpft ihr gegen den Rivalen in seiner modernen Rüstung.
+In der Reisekarte bleiben entdeckte Gegner mit Ort und Stärke sichtbar,
+bis ihr sie besiegt habt. Ein Häkchen markiert bereits besiegte Gegner.
+Pro Runde bekommt jeder Gegner eine Waffe. In Akt I sind das Schwert,
+Axt, Bogen, Speer oder Lanze. In Akt II treten Impulsklinge, Servo-Axt,
+Bolzenwerfer, Teleskopspeer und Schub-Lanze an. Der Held pariert weiter
+mit seinem Schwert. Die Gegner behalten ihre Waffen beim Zurückgehen.
+
+Die Twitch-Verbindung liest den öffentlichen Chat direkt als Gast.
+Die Regie zeigt an, ob der Kanal verbunden ist. Sie sendet keine Nachrichten.
+
+Musik und Effekte laufen ab Rundenstart über „Zahlenjagd · Spielanzeige“
+im OBS-Audiomixer. Musik-Credits.txt enthält die Quellen und den Kopiertext
+für dein Twitch-Panel oder deine VOD-Beschreibung.

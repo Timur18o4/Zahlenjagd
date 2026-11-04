@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zahlenjagd · Steuerung</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/control.mjs"></script>
+</head>
+<body class="control">
+  <main>
+    <header><span>✦ &nbsp; VOM NIEMAND ZUM RETTER</span><h1>Zahlenjagd</h1><p>Regie für das OBS-Spiel</p></header>
+    <section class="control-card status-card"><div><span>SPIELSTAND</span><strong id="status">Verbinde …</strong></div><div><span>TWITCH-CHAT</span><strong id="twitch">Verbinde …</strong></div></section>
+    <section class="control-card">
+      <h2>Twitch-Kanal</h2>
+      <form id="channel-form">
+        <label for="channel">Kanalname oder Twitch-Kanallink</label>
+        <div class="channel-actions">
+          <input id="channel" name="channel" placeholder="z. B. mein_kanal" type="text" maxlength="300" autocomplete="off" spellcheck="false" autocapitalize="none" required disabled>
+          <button id="connect-channel" type="submit" disabled>Kanal verbinden</button>
+        </div>
+      </form>
+      <p id="channel-note" role="status"></p>
+    </section>
+    <section class="control-card">
+      <h2>Runde starten</h2>
+      <p>Im Chatmodus wird der erste gültige Befehl von <b>!a</b> bis <b>!e</b> sofort ausgeführt. Im Handtest wählst du die Wege selbst.</p>
+      <div class="actions">
+        <button id="manual" disabled>Handtest starten</button>
+        <button id="chat" disabled>Chat-Runde starten</button>
+        <button id="shuffle" disabled>Neue Route würfeln</button>
+      </div>
+    </section>
+    <section class="control-card">
+      <h2>Wege vom aktuellen Standort</h2>
+      <div id="picks"></div>
+      <details class="scouted"><summary id="scouted-title">Entdeckte Gegner</summary><ul id="scouted-list"></ul></details>
+      <p id="note" role="status"></p>
+      <div class="actions secondary"><button id="reset" disabled>Spiel zurücksetzen</button><button id="shutdown" disabled>Zahlenjagd beenden</button><a href="/overlay" target="_blank" rel="noopener">Stumme Vorschau ↗</a><a href="/musik-credits" target="_blank" rel="noopener">Musik-Credits ↗</a></div>
+    </section>
+  </main>
+</body>
+</html>

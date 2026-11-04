@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zahlenjagd · OBS</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/overlay.mjs"></script>
+</head>
+<body class="overlay">
+  <div id="stage">
+    <header class="masthead">
+      <div class="seal" aria-hidden="true">✦</div>
+      <div class="brand"><span id="act-title">AKT I · DAS RENNEN ZUR ZITADELLE</span><h1>Zahlenjagd</h1></div>
+      <div class="mast-right"><span id="round">0 / 20 GEGNER BESIEGT</span><strong id="region">Dorfplatz</strong></div>
+    </header>
+    <main class="playfield">
+      <section class="field">
+        <canvas id="map" width="1310" height="820" aria-label="Landschaft mit Spielfigur und Gegnern"></canvas>
+        <div class="map-label"><span>✦</span> <b id="map-region">GRÜNLAND</b><small id="map-faction"></small></div>
+        <div class="map-key"><i></i> Eure Figur</div>
+        <div id="rival-ribbon" class="rival-ribbon" hidden>
+          <b>RIVALE · NEBENROUTE</b><span id="rival-status"></span><div class="rival-track"><i id="rival-progress"></i></div>
+        </div>
+        <div class="map-credit">Musik von Scott Buckley · CC BY 4.0</div>
+        <div class="announcement" id="announcement" hidden>
+          <span id="notice-kicker"></span>
+          <strong id="notice-title"></strong>
+          <span id="notice-text"></span>
+        </div>
+      </section>
+      <aside class="hud">
+        <div class="strength">
+          <div><span>EURE STÄRKE</span><strong id="power">5</strong></div>
+          <div class="strength-icon" aria-hidden="true">⚔</div>
+        </div>
+        <div class="pick-title"><h2 id="prompt">Wählt euren Weg</h2></div>
+        <div id="rivals" class="rivals"></div>
+        <div class="hint" id="hint">Kleinere Zahl besiegen und ihre Stärke übernehmen.</div>
+      </aside>
+    </main>
+    <footer class="trail">
+      <div class="trail-label"><span>DIE REISEKARTE</span><strong id="open-count">Offene Gegner</strong><small>Zahl = Stärke · ✓ = besiegt</small></div>
+      <div id="trail-steps"></div>
+    </footer>
+  </div>
+</body>
+</html>
